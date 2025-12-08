@@ -3,7 +3,7 @@
 #include<string>
 #include <vector>
 using namespace std;
-int sum = 0;
+
 inline bool valid_pos(int i,int j , const vector<string> &grid){ // Función que se devuelve si las posiciones son válidas  o no
     return (i >= 0 && i < ((int)grid.size()) && j >= 0  && j < ((int)grid[0].length()));
 }
