@@ -69,7 +69,7 @@ int main(){
     cout<<tabla<<endl<<endl;
     grafo.print(); cout<<endl;
 #endif
-    //Búsqueda de los nodos inicio y final
+
     int id_svr = tabla.search("svr"); //Id desde la cual se parte
 
     vector<vector<vector<long long>>> mem(grafo.graph.size(),vector<vector<long long>>(2,vector<long long>(2,-1))); //matriz de memoria de tamaño,  [input x 2 x 2]
