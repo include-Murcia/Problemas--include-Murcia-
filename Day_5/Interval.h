@@ -7,26 +7,23 @@ struct Interval {
     long long min;
     long long max;
 
-    long long mid() const {
-        return (min + max) / 2;
-    }
-
-    bool operator<(const Interval& other) const {
+    bool operator<(const Interval& other) const { //Sobrecarga de operador para saber si el intervalo es menor
 
     if (min != other.min) return min < other.min;
     return max < other.max; 
     }
 
-    bool operator>(const Interval& other) const {
+    bool operator>(const Interval& other) const { //Sobrecarga de operador para saber si el intervalo es mayor
 
     if (min != other.min) return min > other.min;
     return max > other.max; 
     }
 
-    friend std::ostream& operator<<(std::ostream &out, const Interval &I){
+    friend std::ostream& operator<<(std::ostream &out, const Interval &I){ // Sobrecarga de operador para impimir el intervalo
         out<<"("<<I.min<<"-"<<I.max<<")";
         return out;
     }
 };
+
 
 #endif
